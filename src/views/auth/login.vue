@@ -18,15 +18,15 @@
                 </div>
 
                 <div class ="remember">
-                    <button type="submit">Login</button>
+                    <button type="submit" class="login">Login</button>
                     <label>
                         <input type="checkbox" checked="checked" name="remember"> <i>Remember me</i>
                     </label>
                 </div>
 
                 <div class="container" style="background-color:#04AA6D">
-                    <button type="button" class="cancel"><a style="text-decoration:none" href="#">Cancel?</a></button>
-                    <span class="password"> <router-link to="/forgot.vue">Forgot password? </router-link>
+                    <button type="submit" class="cancel">Cancel</button>
+                    <span class="password"> <router-link to="./forgot.vue">Forgot password? </router-link>
                     </span>
                 </div>
 
@@ -41,9 +41,7 @@
 </template>
 
 <script lang="ts">
-export default {
-
-}
+    
 </script>
 
 <style>
@@ -62,7 +60,7 @@ export default {
 }
 body {
     background: beige;
-    background-image: url(background.jpg);
+    /* //background-image: url(background.jpg); */
     background-size:auto;
     max-width: 70;
     scale: 10;
@@ -94,7 +92,7 @@ input[type=text], input[type=password] {
     padding: 10px 50px;
 }
 
-button {
+.login {
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color: #04AA6D;
@@ -106,9 +104,9 @@ button {
     border-radius: 12px;
 
 }
-button:hover {
+.login:hover {
     opacity: 0.8;
-    color: white;
+    /* color: white; */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -117,10 +115,18 @@ span.password {
     padding-top: 16px;
 }
 .cancel {
+     transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 12px;
     transition-duration: 0.4s;
     width: auto;
     padding: 10px 18px;
-    background-color: lightseagreen;
+    background-color: goldenrod;
     float:left;
+}
+.cancel:hover {
+     opacity: 0.8;
+    /* color: white; */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 </style>
