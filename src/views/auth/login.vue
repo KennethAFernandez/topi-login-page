@@ -1,81 +1,64 @@
 <template>
-    <body id="login-body">
-        <meta content="width=50%">
-        <div class="title">
-            <h1> Topi Login Page </h1>
-            <p><i>Welcome back!</i></p>
-        </div>
 
-        <div >
-            <form action="#" method="post">
+    <div class="title">
+        <img style="width:100px; height:100px;" src="../../images/logo.png"> 
+        <h1> Topi Login Page </h1>
+        <p><i>Welcome back!</i></p>
+    </div>
 
-                <div class="container">
-                    <label for="username"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Your Username" name="username" required>
-                    <label for="password"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Your Password" name="password" required>
-                    
-                </div>
+    <div style="border: 0">
+        <form id="login-form" action="#" method="post">
 
-                <div class ="remember">
-                    <button type="submit" class="login">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> <i>Remember me</i>
-                    </label>
-                </div>
+            <div class="container">
+                <label style="font-size:20px" for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Your Username" name="username" required>
+                <label style="font-size:20px" for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Your Password" name="password" required>
 
-                <div class="container" style="background-color:#04AA6D">
-                    <button type="submit" class="cancel">Cancel</button>
-                    <span class="password"> <router-link to="./forgot.vue">Forgot password? </router-link>
-                    </span>
-                </div>
-
-                <div class="list-links">
-                    <ul><a href="#">Home</a></ul>
-                    <ul><a href="?#/about">About</a></ul>
-                </div>
-
-            </form>
+                    <div class="remember">
+                            <button type="submit" id="login">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> <i>Remember me</i>
+                        </label>
+                    </div>
             </div>
-    </body>
+        </form>
+
+        <div id="options">
+                <ul id="ul-links">            
+                    <li><a href="#">About Saga Education</a></li>
+                    <li><a href="#about">About Mines Field Session Group Topi</a></li>
+                    <li><span class="password"><a href="#forgot">Forgot Password?</a></span></li>
+                    <li><a href=#home>Back to home page?</a></li>
+                </ul>
+        </div>  
+    </div>
 </template>
 
+
 <script lang="ts">
-    
 </script>
 
-<style>
 
-.list-links{
-    padding: 7px 85px;
-    margin: 0px;
-    background: #04AA6D;
-    color:beige;
-    text-align: right;
-}
+<style scoped>
+
+/* Title, Logo, Welcome */
 .title {
     margin: 0 auto;
     width: 600px;
     font-display: italic;
 }
-body {
-    background: beige;
-    /* //background-image: url(background.jpg); */
-    background-size:auto;
-    max-width: 70;
-    scale: 10;
 
-    
-}
-form {
+/* Login form */
+#login-form {
     border: 5px groove #04AA6D;
     margin: 0 auto;
     width: 600px;
     text-align: center;
-    background-color: bisque;
-    
-    }
+    background-color:blanchedalmond;   
+}
 
+/* Input fields */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px 10px ;
@@ -85,14 +68,8 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-.container {
-    padding: 40px;
-}
-.remember {
-    padding: 10px 50px;
-}
-
-.login {
+/* Buttons, Remember me */
+#login {
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color: #04AA6D;
@@ -102,31 +79,51 @@ input[type=text], input[type=password] {
     cursor: pointer;
     width: 50%;
     border-radius: 12px;
-
 }
-.login:hover {
+#login:hover {
     opacity: 0.8;
-    /* color: white; */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.container {
+    padding: 40px;
+}
+.remember {
+    padding: 10px 50px;
 }
 
-span.password {
-    float: right;
-    padding-top: 16px;
+/* Relevant Links Div */
+#options {
+    border: 5px groove #04AA6D;
+    margin: 15px auto;
+    width: 300px;
+    text-align: center;
+    background-color: bisque;  
 }
-.cancel {
-     transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    border-radius: 12px;
-    transition-duration: 0.4s;
-    width: auto;
-    padding: 10px 18px;
-    background-color: goldenrod;
-    float:left;
+
+/* Relevant Links List */
+#ul-links{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: darkslategray;
+    overflow: hidden;
 }
-.cancel:hover {
-     opacity: 0.8;
-    /* color: white; */
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+/* Link styling */
+li {
+    text-align: center;
+    border-bottom: 1px solid black;
 }
+li a {
+    display: block;
+    color: beige;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+    color: white;
+}
+
 </style>
