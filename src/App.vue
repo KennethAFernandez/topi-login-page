@@ -28,6 +28,6 @@
   color: #42b983;
 }
 body {
-  background-color: beige;
+  background-color: #ECE7B4
 }
 </style>

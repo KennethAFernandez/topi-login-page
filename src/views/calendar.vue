@@ -88,24 +88,24 @@ export default {
 .col {
     border: 100px;
 }
-
-/* Info in Section */
 .cal {
     border-radius: 20px;
     margin: 10px;
     padding: 20px;
-    background-color:palegreen;
-    border: 5px royalblue;
-    border-style: outset;
+    background-color: blanchedalmond;
+    border: 5px #04AA6D;
+    border-style: groove;
     display: inline-flex;
     white-space: normal;
 }
+
+/* Info in Section */
 .event {
     margin: 10px;
     padding: 10px;
-    border: 3px royalblue;
-    border-style: inset;
-    background-color:beige;
+    border: 3px #04AA6D;
+    border-style: groove;
+    background-color:antiquewhite;
     word-break:normal;
     white-space: normal;
 }
