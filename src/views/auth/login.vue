@@ -1,5 +1,5 @@
 <template>
-
+<div>
     <div class="title">
         <img style="width:100px; height:100px;" src="../../images/logo.png"> 
         <h1> Topi Login Page </h1>
@@ -29,10 +29,11 @@
                     <li><a href="#">About Saga Education</a></li>
                     <li><a href="#about">About Mines Field Session Group Topi</a></li>
                     <li><span class="password"><a href="#forgot">Forgot Password?</a></span></li>
-                    <li><a href=#home>Back to home page?</a></li>
+                    <li><a href=#>Back to home page?</a></li>
                 </ul>
         </div>  
     </div>
+</div>
 </template>
 
 

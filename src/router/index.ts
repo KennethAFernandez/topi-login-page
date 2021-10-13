@@ -3,6 +3,8 @@ import Home from '../views/Home.vue'
 import Login from '../views/auth/login.vue'
 import Forgot from '../views/auth/forgot.vue'
 import Calendar from '../views/calendar.vue'
+
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',

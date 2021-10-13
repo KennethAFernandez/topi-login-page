@@ -1,5 +1,5 @@
 <template>
-
+<div>
     <h1> Topi Scheduling Page </h1>
     <p> 
         <i>Here you can see your upcoming events, as well as create/delete any
@@ -69,7 +69,7 @@
             </div>
         </div>
     </div>
-
+</div>
 </template>
 
 <script>
